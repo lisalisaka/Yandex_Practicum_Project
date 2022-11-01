@@ -1,0 +1,9 @@
+__pycache__/
+.env
+.venv
+env/
+venv/
+ENV/
+.idea/
+geckodriver.log
+tests/.pytest_cache
