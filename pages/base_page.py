@@ -3,7 +3,8 @@ from selenium.webdriver.support import expected_conditions
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium import webdriver
-from .locators import BasePageLocators
+from locators.base_page_locators import BasePageLocators
+from pages import env
 
 class BasePage():
 
@@ -34,11 +35,11 @@ class BasePage():
         self.yandex_logo().click()
         self.new_window = self.driver.window_handles[1]
         self.driver.switch_to.window(self.new_window)
-        WebDriverWait(self.driver, 15).until(expected_conditions.url_to_be('https://dzen.ru/?yredirect=true'), 'Dzen URL not found')
-        assert self.driver.current_url == 'https://dzen.ru/?yredirect=true', 'URL of redirected page does not match expextable result'
+        WebDriverWait(self.driver, 15).until(expected_conditions.url_to_be(env.dzen_link), 'Dzen URL not found')
+        assert self.driver.current_url == env.dzen_link, 'URL of redirected page does not match expextable result'
 
     @allure.step('Кликнуть на лого приложения и сравнить url с ожидаемым')
     def check_click_on_app_logo_open_base_page(self):
         self.app_logo().click()
-        WebDriverWait(self.driver, 15).until(expected_conditions.url_to_be('https://qa-scooter.praktikum-services.ru/'))
-        assert self.driver.current_url == 'https://qa-scooter.praktikum-services.ru/', 'URL does not match expextable result'
+        WebDriverWait(self.driver, 15).until(expected_conditions.url_to_be(env.base_pase_link))
+        assert self.driver.current_url == env.base_pase_link, 'URL does not match expextable result'

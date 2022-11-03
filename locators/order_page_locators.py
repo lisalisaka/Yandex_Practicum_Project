@@ -1,33 +1,5 @@
 from selenium.webdriver.common.by import By
 
-
-class BasePageLocators():
-    GET_COOKIE_BUTTON = (By.ID, 'rcc-confirm-button')
-    ORDER_BUTTON = (By.XPATH, ".//button[text()='Заказать']")
-    YANDEX_lOGO = (By.XPATH, ".//img[@alt='Yandex']")
-    APP_SCOOTER_LOGO = (By.XPATH, ".//img[@alt='Scooter']")
-
-class QuestionsPageLocators():
-    COST_QUESTION = (By.XPATH, ".//div[@id='accordion__heading-0' and @role='button']")
-    COST_ANSWER = (By.XPATH, ".//div[@id='accordion__panel-0' and @role='region']")
-    COUNT_QUESTION = (By.XPATH, ".//div[@id='accordion__heading-1' and @role='button']")
-    COUNT_ANSWER = (By.XPATH, ".//div[@id='accordion__panel-1' and @role='region']")
-    TIME_RENT_QUESTION = (By.XPATH, ".//div[@id='accordion__heading-2' and @role='button']")
-    TIME_RENT_ANSWER = (By.XPATH, ".//div[@id='accordion__panel-2' and @role='region']")
-    START_TODAY_QUESTION = (By.XPATH, ".//div[@id='accordion__heading-3' and @role='button']")
-    START_TODAY_ANSWER = (By.XPATH, ".//div[@id='accordion__panel-3' and @role='region']")
-    CHANGE_RENT_TIME_QUESTION = (By.XPATH, ".//div[@id='accordion__heading-4' and @role='button']")
-    CHANGE_RENT_TIME_ANSWER = (By.XPATH, ".//div[@id='accordion__panel-4' and @role='region']")
-    CHARGE_QUESTION = (By.XPATH, ".//div[@id='accordion__heading-5' and @role='button']")
-    CHARGE_ANSWER = (By.XPATH, ".//div[@id='accordion__panel-5' and @role='region']")
-    CANCEL_ORDER_QUESTION = (By.XPATH, ".//div[@id='accordion__heading-6' and @role='button']")
-    CANCEL_ORDER_ANSWER = (By.XPATH, ".//div[@id='accordion__panel-6' and @role='region']")
-    OUT_OF_MKAD_QUESTION = (By.XPATH, ".//div[@id='accordion__heading-7' and @role='button']")
-    OUT_OF_MKAD_ANSWER = (By.XPATH, ".//div[@id='accordion__panel-7' and @role='region']")
-    HIDDEN_ANSWERS = (By.XPATH, ".//div[@role='region' and @hidden]")
-    OPENED_ANSWER_TEXT = (By.XPATH, ".//div[@role='region' and not(@hidden)]/p")
-    BIG_ORDER_BUTTON = (By.XPATH, ".//button[@class='Button_Button__ra12g Button_UltraBig__UU3Lp']")
-
 class OrderPageLocators():
     NAME_INPUT = (By.XPATH, ".//input[@placeholder='* Имя']")
     SURNAME_INPUT = (By.XPATH, ".//input[@placeholder='* Фамилия']")

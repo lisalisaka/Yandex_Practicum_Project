@@ -1,9 +1,9 @@
 from selenium import webdriver
 import allure
 
-from .locators import BasePageLocators
-from .locators import OrderPageLocators
-from .locators import QuestionsPageLocators
+from locators.base_page_locators import BasePageLocators
+from locators.order_page_locators import OrderPageLocators
+from locators.questions_page_locators import QuestionsPageLocators
 from .base_page import BasePage
 
 
