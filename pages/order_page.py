@@ -1,6 +1,5 @@
 from selenium import webdriver
 import allure
-
 from locators.base_page_locators import BasePageLocators
 from locators.order_page_locators import OrderPageLocators
 from locators.questions_page_locators import QuestionsPageLocators
